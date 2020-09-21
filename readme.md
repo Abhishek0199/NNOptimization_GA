@@ -7,7 +7,7 @@ The chromosome is defined as:
 
 - Alpha (Learning Rate) -> 4 bits
   - Constraints are: > 0 and < 1
-  - The value of alpha is calculated by get the decimal value as though the bits were after decimal i.e. if alpha is represented as - 0010 -> (1/2^1)*0 + (1/2^2)*0 + (1/2^3)*1 + (1/2^4)*0.
+  - The value of alpha is calculated by get the decimal value as though the bits were after decimal i.e. if alpha is represented as - 0010 -> (1/2^3)*0 + (1/2^4)*0 + (1/2^5)*1 + (1/2^6)*0. This is done to keep the value of alpha small.
 - Activation Functions -> 2 bits for 4 AF:
   - Relu = 0
   - Tanh = 1
@@ -20,7 +20,7 @@ The chromosome is defined as:
 - Output AF -> Sigmoid (binary classification)
 - The population size = 30
 - The chromosome size = 4 + 2 + 5 + 5 = 16
-- Number of epochs for each training is 25
+- Number of epochs for each training is 20
 - We are using the same activation function for both the hidden layers and the input layer.
 
 _Please Note - For performing any step, ensure that the chromsomes are valid chromosomes (i.e. satisfy all the constraints)_
@@ -50,7 +50,7 @@ The process of the selection of two parents is done using _Roulette Wheel Select
 After the selection of two parents, we now proceed on the step of performing crossover or exchange of their genetic material. For crossover, we are using _Two-Point Crossover_ done as follows:
 
 - Generation two random crossover points or indices.
-- Swap the material of both the parents present in between the points.
+- Swap the material of both the parents present in alternate blocks.
 - Keep the remaining material same.
 - Return the two offsprings.
 
