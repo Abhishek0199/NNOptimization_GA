@@ -3,6 +3,7 @@
 ### About:
 
 The following code implements Genetic Algorithm for the optimization of neural network architecture which includes learning rate, activation functions and number of hidden neurons with fixed 1 or 2 hidden layers and output activation function as sigmoid because of binary classification. The training for each neural network will be done using Keras python library.
+The training-validation-testing split is: 70-20-10
 The chromosome is defined as:
 
 - Alpha (Learning Rate) -> 4 bits
